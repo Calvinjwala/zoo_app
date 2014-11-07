@@ -1,0 +1,12 @@
+<%= form_for(@zoo) do |f| %>
+
+<div>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %>
+</div>
+<div>
+  <%= f.label :location %><br>
+  <%= f.text_field :location %>
+</div>
+  <%= f.submit %>
+<% end %>

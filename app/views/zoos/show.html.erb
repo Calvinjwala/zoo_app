@@ -1,0 +1,9 @@
+<h1><%= @zoo.name %></h1>
+
+<%= @zoo.location %><br>
+
+<a href="<%=@zoo.id%>/edit">Edit</a><br>
+
+<%= link_to('Delete', @zoo, :method => :delete) %>
+
+

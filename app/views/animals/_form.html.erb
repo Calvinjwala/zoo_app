@@ -1,0 +1,16 @@
+<%= form_for(@animals) do |f| %>
+
+<div>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %>
+</div>
+<div>
+  <%= f.label :photo %><br>
+  <%= f.text_field :photo %>
+</div>
+<div>
+  <%= f.label :zoo_id %><br>
+  <%= f.text_field :zoo_id %>
+</div>
+  <%= f.submit %>
+<% end %>

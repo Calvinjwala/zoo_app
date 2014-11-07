@@ -1,0 +1,14 @@
+<h1>Zoos!</h1>
+<p>Welcome to Zoos around the world</p>
+
+<% @zoos.each do |zoo| %>
+<%= zoo.name %><br>
+<%= zoo.location %> <br>
+<a href = "/zoos/<%= zoo.id %>">Show</a><br>
+<br>
+<% end %>
+
+<a href="zoos/new">Add a Zoo</a><br>
+<br>
+
+Check out some <a href="/animals">animals</a>
