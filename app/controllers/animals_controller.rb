@@ -13,25 +13,27 @@ class AnimalsController < ApplicationController
   end
 
   def edit
+    id = params[:id]
+    @animals = Animal.find_by_id(id)
   end
 
   def create
     animals = params[:animal].permit(:name, :photo, :zoo_id)
-    Animal.create animal
-    redirect_to 'animals/index'
+    Animal.create animals
+    redirect_to(animals_path)
   end
 
   def update
     a = Animal.find(params[:id])
     animals = params[:animal].permit(:name, :photo, :zoo_id)
-    a.update_attributes animal
-    redirect_to 'animals/index'
+    a.update_attributes animals
+    redirect_to(animals_path)
   end
 
   def destroy
     a = Animal.find(params[:id])
     a.destroy
-    redirect_to 'animals/index'
+    redirect_to(animals_path)
   end
 
 end

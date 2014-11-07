@@ -1,5 +1,11 @@
 <h1><%= @animals.name %></h1>
 
-<%= @animals.photo %><br>
+<img src ="<%= @animals.photo %>"><br>
+
+Zoo Id: <%= @animals.zoo_id %><br>
 
 <a href="<%=@animals.id%>/edit">Edit</a><br>
+<%= link_to('Delete', @animal, :method => :delete) %><br>
+
+<a href="/">Home</a>
+
